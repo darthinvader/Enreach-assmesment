@@ -63,3 +63,5 @@ olderPerson.map((person) => {
     console.log(`Person ${person.name} has income of:${income}`)
   );
 });
+
+// Then you could do a for loop but i mean why? :P
