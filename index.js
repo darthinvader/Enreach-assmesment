@@ -50,6 +50,16 @@ const api = (person) => {
 persons.map((person) => {
   if (person.age >= 35) {
     const promise = api(person);
-    promise.then((income) => console.log(income));
+    promise.then((income) =>
+      console.log(`Person ${person.name} has income of:${income}`)
+    );
   }
+});
+
+// Second solution
+const olderPerson = persons.filter((person) => person.age >= 35);
+olderPerson.map((person) => {
+  api(person).then((income) =>
+    console.log(`Person ${person.name} has income of:${income}`)
+  );
 });
